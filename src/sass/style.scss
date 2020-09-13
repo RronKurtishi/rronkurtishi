@@ -1,0 +1,106 @@
+@import '_variables.scss';
+@import 'reset.scss';
+
+body {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	background: $dark-gray;
+
+	.container {
+		height: 95vh;
+		width: 800px;
+		margin: 20px auto;
+		background: $gray;
+		border-radius: $br-6;
+
+		.section-title {
+			margin-bottom: 20px;
+
+			h2 {
+				font-size: 1.8em;
+				font-weight: 700;
+				margin-bottom: 5px;
+			}
+
+			p {
+				color: $light-gray;
+			}
+		}
+
+		.header {
+			background: linear-gradient(150deg, $accent, $white 75%);
+			height: 100px;
+			width: 100%;
+			border-radius: 6px 6px 0 0;
+		}
+		.content {
+      margin: 0 20px;
+      
+			.photo {
+				position: relative;
+				background-image: url("../images/image-placeholder.jpg");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				height: 150px;
+				width: 150px;
+				border-radius: 50%;
+				margin: 0 auto;
+				margin-top: -75px;
+			}
+
+			.name {
+				margin: 15px;
+				text-align: center;
+
+				h1 {
+					color: $white;
+					font-weight: 900;
+					font-size: 2.5em;
+				}
+
+				h3 {
+					color: $accent;
+					font-weight: 600;
+					font-size: 1.2em;
+				}
+			}
+
+			hr {
+				height: 0px;
+				border: 1px solid $dark-gray;
+				margin: 20px auto;
+			}
+
+			.skills-section {
+				color: $white;
+				text-align: center;
+
+				.skills-container {
+          width: 80%;
+          margin: 0 auto;
+          
+					.skill {
+						display: inline-block;
+						background: $dark-gray;
+						padding: 5px 8px;
+						border-radius: $br-6;
+						font-weight: 600;
+						font-size: 1.1em;
+						margin: 5px 2px;
+
+						&:hover {
+							color: $accent;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.container {
+		width: 90% !important;
+	}
+}
