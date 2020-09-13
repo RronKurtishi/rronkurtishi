@@ -3,13 +3,6 @@ const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
-/*
-  -- TOP LEVEL FUCITONS --
-  gulp.task - Define tasks
-  gulp.src - Point to the files to use
-  gulp.dest - Points to the folder to output
-  gulp.watch - watch files and folders for changes
-*/
 
 // Logs message
 gulp.task('message', async () => console.log("Gulp is running..."));
@@ -36,8 +29,8 @@ gulp.task('sass', async() => {
 
 // Scripts 
 gulp.task('scripts', async() => {
-  gulp.src('src/js/*.js')
-    .pipe(concat('main.js'))
+  gulp.src('src/ts/*.ts')
+    .pipe(concat('main.ts'))
     .pipe(uglify())
     .pipe(gulp.dest('dist/js'));
 })
@@ -47,7 +40,7 @@ gulp.task('build', gulp.series('message', 'copyHtml', 'imageMin', 'sass', 'scrip
 
 //
 gulp.task('watch', async() => {
-  gulp.watch('src/js/*.js', gulp.series('scripts'));
+  gulp.watch('src/ts/*.ts', gulp.series('scripts'));
   gulp.watch('src/images/*', gulp.series('imageMin'));
   gulp.watch('src/sass/*.scss', gulp.series('sass'));
   gulp.watch('src/*.html', gulp.series('copyHtml'));
