@@ -1,0 +1,31 @@
+{
+  "name": "rronkurtishi",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RronKurtishi/rronkurtishi.git"
+  },
+  "author": "Rron Kurtishi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RronKurtishi/rronkurtishi/issues"
+  },
+  "homepage": "https://github.com/RronKurtishi/rronkurtishi#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "@types/node": "^14.10.1",
+    "ts-node": "^9.0.0"
+  }
+}
